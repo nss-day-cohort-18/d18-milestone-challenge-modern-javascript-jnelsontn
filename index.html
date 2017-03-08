@@ -1,28 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Prototypal Inheritance MileStone - Robot Battledome</title>
-	<link rel="stylesheet" href="dist/css/bootstrap.min.css">
+	<title>Robot Battledome - Milestone Challenge</title>
+	<link rel="stylesheet" href="dist/bootstrap.min.css">
 
 </head>
 
 <body>
 
+<br /><br />
+
 <header>
 	<nav class="navbar text-center">
 
-		   	<h3 class="text-primary">BattleBots - Prototypes - MileStone</h3>
-	
+		   	<h3 class="text-primary">BattleBots - Milestone Challenge</h3>
+
 	</nav>
 </header>
-
+ 
+<br /><br />
 
 <div class="container">
-	<div class="row">
 
-		<div class="col-md-4">
+	<div class="row text-center">
 
-			Robot 1:<input type="text" id="robot1_name"> <br /><br />
+		<div class="col-md-6">
+
+			<b>Player 1:</b> <br /><br />
+			<input type="text" id="robot1_name"> <br /><br />
 
 			<select id="robot1_dropdown">
 	            <option value="None" selected="Selected">Select Robot Type</option>
@@ -30,9 +35,10 @@
 
 		</div>
 
-		<div class="col-md-4">
+		<div class="col-md-6">
 
-			Robot 2:<input type="text" id="robot2_name"> <br /><br />
+			<b>Player 2:</b>  <br /><br />
+			<input type="text" id="robot2_name"> <br /><br />
 
 			<select id="robot2_dropdown">
 	            <option value="None" selected="Selected">Select Robot Type</option>
@@ -40,12 +46,25 @@
 
 		</div>
 
-		<div class="col-md-4">
+	</div>
+
+	<br /><br />
+
+	<div class="row text-center">
+		<div class="col-md-12">
 
 			<input type="button" id="robot_button" value="Robot Fight!"> <br /><br />
 
 		</div>
-	</div> <!-- end row -->
+	</div>
+
+	<div class="row text-center">
+		<div class="col-md-12 winlose">
+
+			<!-- battle statistics -->
+
+		</div>
+	</div>
 
 
 
