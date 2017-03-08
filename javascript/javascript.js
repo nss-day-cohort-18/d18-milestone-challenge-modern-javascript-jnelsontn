@@ -130,10 +130,16 @@ function battleBots (battle_bot1, battle_bot2, setName1, setName2) {
 	battle_bot2.name = setName2;
 
 	battle_bot1.health = randomGenerator(battle_bot1.health.min, battle_bot1.health.max);
-	battle_bot1.attack = randomGenerator(battle_bot1.attack.min, battle_bot1.attack.max);
-
 	battle_bot2.health = randomGenerator(battle_bot2.health.min, battle_bot2.health.max);
-	battle_bot2.attack = randomGenerator(battle_bot2.attack.min, battle_bot2.attack.max);
+
+	const store1_min = battle_bot1.attack.min;
+	const store1_max = battle_bot1.attack.max;
+
+	const store2_min = battle_bot2.attack.min;
+	const store2_max = battle_bot2.attack.max;
+
+	battle_bot1.attack = randomGenerator(store1_min, store1_max);
+	battle_bot2.attack = randomGenerator(store2_min, store2_max);
 	
 	console.log('Player 1: ', battle_bot1);
 	console.log('Player 2: ', battle_bot2);
@@ -143,6 +149,9 @@ function battleBots (battle_bot1, battle_bot2, setName1, setName2) {
 		let numRound = 1;
 
 		while (true) {
+
+			battle_bot1.attack = randomGenerator(store1_min, store1_max);
+			battle_bot2.attack = randomGenerator(store2_min, store2_max);
 
 			console.log('Round Number: ', numRound);
 
@@ -173,8 +182,8 @@ function battleBots (battle_bot1, battle_bot2, setName1, setName2) {
 			}
 
 			numRound++;
-		}
-	}
+		} // end loop
+	} // end if
 
 
 }
